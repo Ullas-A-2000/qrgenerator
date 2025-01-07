@@ -1,0 +1,65 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+          href="style.css">
+    <title>QR Code Scanner / Reader
+    </title>
+</head>
+
+<body>
+
+    <div class="mainContainer">
+
+
+    <div class="container" style="margin-bottom: 50px;">
+        <h1>Scan QR Codes</h1>
+        <div class="section">
+            <div id="my-qr-reader">
+            </div>
+        </div>
+    </div>
+
+
+    <hr />
+
+
+    <div>
+        <input type="text" id="textInput" placeholder="Enter text or URL" />
+        <button id="generateButton">Generate QR Code</button>
+      </div>
+      
+      <div class="qrcodeContainer">
+        <div id="qrcode"></div>
+      </div>
+      
+      <button id="openDialog">Open Dialog</button>
+
+      <div id="dialog" class="dialog-overlay">
+          <div class="dialog-box">
+              <div class="dialog-header">Link</div>
+              <div class="dialog-body">
+                  This is the link encoded in qr code <a class="dialoglink" href="http://www.google.com">http://www.google.com</a> do you want to open it
+              </div>
+            <div class="dialog-footer">
+                  <button id="visitLink" onclick="redirect()">visit link</button>
+                  <button id="closeDialog">Close</button>
+              </div>
+          </div>
+      </div>
+
+      <button id="downloadImage">download</button>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script
+        src="https://unpkg.com/html5-qrcode">
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>
